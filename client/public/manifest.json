@@ -2,7 +2,7 @@
   "name": "CeciFlags - Quiz de Bandeiras para Crianças",
   "short_name": "CeciFlags",
   "description": "Quiz educativo de bandeiras do mundo para crianças",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#4F46E5",
