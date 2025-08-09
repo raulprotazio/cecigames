@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { QuizOption } from '@/components/QuizOption';
 import { useGameStore } from '@/lib/store';
 import { audioManager } from '@/lib/audio';
+import { getFlagProps } from '@/lib/flags';
 import { t } from '@/i18n/pt-BR';
 import { ArrowLeft } from 'lucide-react';
 
@@ -88,18 +89,8 @@ export default function Practice() {
       <div className="text-center mb-8">
         <div className="w-48 h-36 mx-auto rounded-xl overflow-hidden flag-shadow mb-4">
           <img 
-            src={`/flags/${currentQuestion.flagCode}.svg`}
-            alt={`Bandeira de ${currentQuestion.correctAnswer}`}
+            {...getFlagProps(currentQuestion.flagCode, currentQuestion.correctAnswer, { format: 'svg' })}
             className="w-full h-full object-cover"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              const parent = target.parentElement;
-              if (parent) {
-                parent.style.background = '#E5E7EB';
-                parent.innerHTML = '<div class="flex items-center justify-center h-full text-gray-500">🏳️</div>';
-              }
-            }}
           />
         </div>
         <p className="text-lg text-foreground font-medium">{t('whichCountry')}</p>

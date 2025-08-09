@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { ContinentFilter } from '@/components/ContinentFilter';
 import { useGameStore } from '@/lib/store';
 import { audioManager } from '@/lib/audio';
+import { getFlagProps } from '@/lib/flags';
 import { t } from '@/i18n/pt-BR';
 
 export default function Home() {
@@ -23,18 +24,8 @@ export default function Home() {
         <div className="text-center mb-8">
           <div className={`w-32 h-24 mx-auto mb-4 rounded-xl overflow-hidden flag-shadow ${!settings.calmMode ? 'gentle-bounce' : ''}`}>
             <img 
-              src="/flags/BR.svg" 
-              alt="Bandeira do Brasil" 
+              {...getFlagProps('BR', 'Brasil', { format: 'svg' })}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                // Fallback to a simple colored rectangle if SVG fails to load
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent) {
-                  parent.style.background = 'linear-gradient(to bottom, #009739 0%, #009739 33%, #FEDF00 33%, #FEDF00 66%, #009739 66%)';
-                }
-              }}
             />
           </div>
           <h2 className="text-2xl font-semibold text-foreground mb-2">{t('learnFlags')}</h2>
