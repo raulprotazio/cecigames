@@ -1,0 +1,168 @@
+Title: CeciFlags — Kids-friendly World Flags Quiz (pt-BR UI, Autism‑aware)
+
+Goal / Description:
+Build a mobile-friendly website (React + TypeScript + Vite) for a child-friendly world flags quiz. Target user: 7-year-old, autistic. The app must be colorful with gentle micro-animations, include sounds, gamification, continent filters, a timer that can be selected at the start (with Pause when timer is on), and a rewards system. It should work offline (cache flags and data) and run well in Safari. UI language: Português (Brasil). No login; all data stored locally.
+
+Platform & Stack
+Frontend: React + TypeScript + Vite
+
+Styling: Tailwind CSS (colorful, high contrast, large touch targets)
+
+State: Zustand (or React Context if preferred)
+
+Animations: Framer Motion (light micro-animations), with a global toggle to reduce motion
+
+Audio: Howler.js (click, correct, incorrect, milestone)
+
+Gamification: canvas-confetti (with a calm mode to disable)
+
+i18n: simple i18n setup (default pt-BR, ready for future languages)
+
+Offline/PWA: Service worker (Workbox) for pre-cache + runtime cache; web app works offline
+
+Persistence: localStorage (and IndexedDB if convenient) for settings, progress, rewards
+
+Testing: Vitest + React Testing Library (core flows)
+
+Data & Content
+Local SVG flags named by ISO 3166-1 alpha-2 (e.g., BR.svg, US.svg).
+
+data/countries.json with: name_pt, iso2, continent (Africa, Americas, Asia, Europe, Oceania).
+
+Provide 10–20 sample flags in repo + a README script/instructions to add all flags later.
+
+Core Features
+Game Modes
+
+Quiz (Multiple Choice): show one large flag + 4 answer options (country names in pt-BR).
+
+Treino (Practice): free exploration, no timer, immediate feedback, infinite time.
+
+Continent Filter
+
+Chips to select: África, Américas, Ásia, Europa, Oceania, ou “Mundo” (todos).
+
+Persist last selection locally.
+
+Timer (selected at start)
+
+Start screen asks: Timer Off (default) or On with choices 10 / 15 / 20s.
+
+When timer is On, show: circular visual countdown + Pause button.
+
+When Off, no countdown; gameplay is calm and unlimited.
+
+Feedback & Sounds
+
+Correct/incorrect audio cues; subtle vibration (if supported) with a toggle.
+
+Clear visual highlight of correct/incorrect answer.
+
+Gamification
+
+Score: +1 per correct.
+
+Streak bonus: +1 extra for every 5 correct in a row (gentle, not flashy).
+
+Rewards: every 10 correct answers = 1 star; every 3 stars = 1 sticker unlock.
+
+Celebrations: small confetti/sparkles on milestones (disabled in Calm Mode).
+
+Collection Screen: grid of stickers (locked/unlocked).
+
+Progress & Profile (local only)
+
+Track per-continent progress, best streak, and (if timer on) best times.
+
+Settings (Configurações)
+
+Language: fixed to pt-BR (i18n infra ready for future).
+
+Toggles: Sounds, Haptics, Reduce Motion / Calm Mode, High Contrast.
+
+Timer defaults (for next session), continent selection, and Reset Progress.
+
+Autism‑aware & Accessibility Requirements
+Calm Mode (default ON for first run): reduced motion, no confetti, softer transitions, no flashing.
+
+Motion toggle globally controls Framer Motion intensity.
+
+Clear, predictable layout; consistent placement of primary actions.
+
+Large targets (min 44x44 px), generous spacing.
+
+Readable typography: friendly rounded font; include option for increased text size.
+
+Color‑blind safe palette and never rely on color alone for correctness; add icons/text.
+
+Audio controls: master SFX toggle + volume slider; no sudden loud sounds.
+
+Timer optional with Pause when enabled to avoid pressure.
+
+Offline first: app shell and initial asset set cached for stable home/school use.
+
+Navigation / Screens (pt-BR)
+Início: “Jogar”, “Treino”, “Coleção”, “Configurações”.
+
+Seleção de Continente: chips com estado selecionado; “Mundo” como atalho.
+
+Tela do Quiz: flag grande, 4 opções, (se timer on) círculo de tempo + botão Pausar.
+
+Resultado Rápido: acertos da rodada, estrelas ganhas, próximo/voltar.
+
+Coleção: stickers desbloqueados/bloqueados com legendas.
+
+Configurações: sons, volume, haptics, calm mode, alto contraste, idioma (fixo pt-BR), timer padrão, reset.
+
+Offline / PWA Behavior
+Pre-cache app shell, UI assets, manifest, icons, and a starter subset of flags.
+
+Runtime cache remaining flag SVGs as visited.
+
+Friendly offline fallback screen if needed.
+
+Installable as a PWA (optional); must also run fine just opened in Safari.
+
+Quality & Tooling
+ESLint + Prettier; npm scripts: dev, build, preview, test.
+
+Basic tests:
+
+renders quiz and options
+
+continent filter logic
+
+timer countdown + pause
+
+scoring + streak + reward unlock
+
+README: how to add all flags, manage data, and deploy.
+
+Deployment
+Hosting: Replit Deploy (provide configuration files and instructions).
+
+CI step or deploy script for building and serving static assets with service worker.
+
+Copy & Language
+App UI: Português (Brasil) (strings in /i18n/pt-BR.json).
+
+Interaction with Replit Agent: English (this prompt).
+
+Use child-friendly labels, e.g., “Jogar”, “Treino”, “Coleção”, “Configurações”, “Pausar”, “Continuar”.
+
+Defaults
+Age target: 7
+
+Timer default: Off (user chooses at start)
+
+Timer options: 10 / 15 / 20 seconds
+
+Rewards: 10 correct = 1 star; 3 stars = 1 sticker
+
+Theme: colorful, not gendered; avoid pink overload
+
+Calm Mode: On by default (can be turned off)
+
+Deliverables:
+A ready-to-run React + TS project on Replit with offline support, sample flags, tests, and Replit Deploy config + README. Ensure it opens smoothly in Safari and performs well on small screens.
+
