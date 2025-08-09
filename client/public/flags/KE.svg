@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <path id="a" stroke-miterlimit="10" d="M-28 0l56 0"/>
+  </defs>
+  <path fill="#fff" d="M0 0h640v480H0z"/>
+  <path fill="#000" d="M0 0h640v144H0z"/>
+  <path fill="#ba0c2f" d="M0 336h640v144H0z"/>
+  <path fill="#fff" d="M0 144h640v40H0z"/>
+  <path fill="#fff" d="M0 296h640v40H0z"/>
+  <g transform="translate(320 240)">
+    <g id="b">
+      <use stroke="#000" stroke-width="16" xlink:href="#a"/>
+      <use stroke="#fff" stroke-width="12" xlink:href="#a"/>
+      <use stroke="#ba0c2f" stroke-width="8" xlink:href="#a"/>
+    </g>
+    <use xlink:href="#b" transform="rotate(36)"/>
+    <use xlink:href="#b" transform="rotate(72)"/>
+    <use xlink:href="#b" transform="rotate(108)"/>
+    <use xlink:href="#b" transform="rotate(144)"/>
+    <use xlink:href="#b" transform="rotate(180)"/>
+    <use xlink:href="#b" transform="rotate(216)"/>
+    <use xlink:href="#b" transform="rotate(252)"/>
+    <use xlink:href="#b" transform="rotate(288)"/>
+    <use xlink:href="#b" transform="rotate(324)"/>
+    <circle r="24" fill="#fff"/>
+    <circle r="16" fill="#ba0c2f"/>
+    <path d="M0-16L0 16M-16 0L16 0" stroke="#000" stroke-width="3"/>
+  </g>
+</svg>

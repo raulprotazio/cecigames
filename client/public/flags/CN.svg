@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <path id="a" fill="#ffde00" d="M-.6.8l.2.3-.2-.4-.2.1z"/>
+  </defs>
+  <path fill="#de2910" d="M0 0h640v480H0z"/>
+  <use x="120" y="120" xlink:href="#a" transform="scale(76.8)"/>
+  <use x="240" y="72" xlink:href="#a" transform="scale(25.6)"/>
+  <use x="240" y="120" xlink:href="#a" transform="scale(25.6)"/>
+  <use x="240" y="168" xlink:href="#a" transform="scale(25.6)"/>
+  <use x="240" y="216" xlink:href="#a" transform="scale(25.6)"/>
+</svg>

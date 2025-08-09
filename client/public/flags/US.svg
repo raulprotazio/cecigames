@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <g fill-rule="evenodd">
+    <g stroke-width="1pt">
+      <path fill="#bd3d44" d="M0 0h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640z"/>
+      <path fill="#fff" d="M0 37h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640zm0 74h640v37h-640z"/>
+    </g>
+    <path fill="#192f5d" d="M0 0h364v259h-364z"/>
+    <g fill="#fff">
+      <g id="a">
+        <g id="b">
+          <g id="c">
+            <g id="d">
+              <g id="e">
+                <g id="f">
+                  <path d="M30.4 11l3.5 10.8h11.4l-9.2 6.7 3.5 10.8-9.2-6.7-9.2 6.7 3.5-10.8-9.2-6.7h11.4z"/>
+                </g>
+                <use x="61" xlink:href="#f"/>
+              </g>
+              <use x="122" xlink:href="#e"/>
+            </g>
+            <use x="244" xlink:href="#d"/>
+          </g>
+          <use x="61" y="44" xlink:href="#c"/>
+        </g>
+        <use x="122" y="88" xlink:href="#b"/>
+      </g>
+      <use x="61" y="132" xlink:href="#a"/>
+    </g>
+  </g>
+</svg>
